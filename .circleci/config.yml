@@ -1,8 +1,6 @@
 version: 2.1
 jobs:
   requirements:
-  environment:
-    BUNDLE_GEMFILE: Gemfile.lock
     docker:
       - image: 'cimg/ruby-2.7-node'
     steps:
