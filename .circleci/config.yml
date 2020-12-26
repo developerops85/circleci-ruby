@@ -1,20 +1,22 @@
 version: 2.1
 jobs:
   requirements:
+  environment:
+    BUNDLE_GEMFILE: Gemfile.lock
     docker:
-      - image: 'cimg/base:2020.12'
+      - image: 'cimg/ruby-2.7-node'
     steps:
       - run:
           command: gem install bundler -v 2.0.1
   build:
     docker:
-      - image: 'cimg/base:2020.12'
+      - image: 'cimg/ruby-2.7-node'
     steps:
       - run:
           command: bundle install
   test:
     docker:
-      - image: 'cimg/base:2020.12'
+      - image: 'cimg/ruby-2.7-node'
     steps:
       - run:
           command: 'rake ci:all'
