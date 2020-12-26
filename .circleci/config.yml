@@ -11,7 +11,7 @@ jobs:
       - image: 'cimg/ruby:2.7.1'
     steps:
       - run:
-          command: gem bundle install
+          command: gem install bundle
 
   test:
     docker:
