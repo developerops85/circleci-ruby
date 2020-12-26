@@ -2,19 +2,19 @@ version: 2.1
 jobs:
   requirements:
     docker:
-      - image: 'cimg/ruby-2.7.1'
+      - image: 'cimg/ruby:2.7.1'
     steps:
       - run:
           command: gem install bundler -v 2.0.1
   build:
     docker:
-      - image: 'cimg/ruby-2.7.1'
+      - image: 'cimg/ruby:2.7.1'
     steps:
       - run:
           command: bundle install
   test:
     docker:
-      - image: 'cimg/ruby-2.7.1'
+      - image: 'cimg/ruby:2.7.1'
     steps:
       - run:
           command: 'rake ci:all'
