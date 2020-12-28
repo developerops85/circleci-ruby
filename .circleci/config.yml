@@ -19,7 +19,7 @@ jobs:
     steps:
       - run:
           command: gem install rake
-                   'rake ci:all'
+                   
 workflows:
   version: 2
   build-and-test:
